@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vendingMachine.views.AdminController">
+   <children>
+      <AnchorPane prefHeight="420.0" prefWidth="169.0" style="-fx-background-color: linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671);">
+         <children>
+            <Button fx:id="userButton" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" ellipsisString="" layoutX="11.0" layoutY="138.0" mnemonicParsing="false" onAction="#userButtonAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #B0A8B9#B0A8B9; -fx-background-radius: 20;" styleClass=".button:pressed" text="Manage User" textFill="#eee0e0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onAction="#moneyButtonAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Update Money" textFill="#eee0e0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" layoutX="11.0" layoutY="242.0" mnemonicParsing="false" onAction="#itemButtonAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Manage Item" textFill="#eee0e0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" layoutX="11.0" layoutY="295.0" mnemonicParsing="false" onAction="#reportAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Export Report" textFill="#eee0e0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" blendMode="MULTIPLY" layoutX="10.0" layoutY="352.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Log Out" textFill="#eee0e0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <ImageView blendMode="MULTIPLY" fitHeight="92.0" fitWidth="89.0" layoutX="40.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@admin.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="userPane" layoutX="169.0" prefHeight="420.0" prefWidth="472.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD; -fx-tab-min-height: 50; -fx-tab-min-width: 70;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" text="Delete">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="142.0" layoutY="234.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="47.0" prefWidth="135.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Delete" />
+                        <TextField fx:id="deleteNameField" blendMode="MULTIPLY" layoutX="135.0" layoutY="95.0" prefHeight="43.0" prefWidth="227.0" promptText="Enter name" style="-fx-background-color: white;" />
+                        <Line endX="100.0" layoutX="261.0" layoutY="138.0" startX="-126.0" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="53.0" fitWidth="49.0" layoutX="77.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@user.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="errorBox" fill="#e10f0f" layoutX="146.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.22900390625" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" text="Add">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addNameField" blendMode="MULTIPLY" layoutX="134.0" layoutY="46.0" prefHeight="34.0" prefWidth="221.0" promptText="Enter name" style="-fx-background-color: white;" />
+                        <PasswordField fx:id="passwordField" blendMode="MULTIPLY" layoutX="133.0" layoutY="113.0" prefHeight="34.0" prefWidth="224.0" promptText="Enter password" style="-fx-background-color: white;" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="47.0" fitWidth="48.0" layoutX="77.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@user.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="47.0" fitWidth="56.0" layoutX="78.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@password.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="89.0" fitWidth="52.0" layoutX="76.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@username.png" />
+                           </image>
+                        </ImageView>
+                        <ChoiceBox fx:id="roleChoice" layoutX="134.0" layoutY="183.0" prefHeight="34.0" prefWidth="223.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9;" />
+                        <Button layoutX="154.0" layoutY="273.0" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Add" />
+                        <Line endX="120.0" layoutX="235.0" layoutY="80.0" startX="-100.0" />
+                        <Line endX="123.0" layoutX="234.0" layoutY="147.0" startX="-100.0" />
+                        <Text fx:id="addError" fill="#e80d0d" layoutX="154.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="itemPane" layoutX="169.0" prefHeight="420.0" prefWidth="472.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD; -fx-tab-min-height: 50; -fx-tab-min-width: 70;" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD;" text="Delete">
+               <content>
+                  <AnchorPane prefHeight="337.0" prefWidth="431.0">
+                     <children>
+                        <TextField fx:id="deleteItem" blendMode="MULTIPLY" layoutX="148.0" layoutY="100.0" prefHeight="34.0" prefWidth="222.0" promptText="Enter  name" style="-fx-background-color: white;" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="47.0" fitWidth="53.0" layoutX="86.0" layoutY="94.0">
+                           <image>
+                              <Image url="@item_name.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="148.0" layoutY="211.0" mnemonicParsing="false" onAction="#deleteItemAction" prefHeight="47.0" prefWidth="124.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Dlete" />
+                        <Line endX="121.0" layoutX="249.0" layoutY="134.0" startX="-100.0" />
+                        <Text fx:id="deleteError" fill="#cd1a1a" layoutX="149.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="196.22900390625" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD;" text="Insert">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="nameInsertText" blendMode="MULTIPLY" layoutX="76.0" layoutY="29.0" prefHeight="34.0" prefWidth="202.0" promptText="Name" style="-fx-background-color: white;" />
+                        <TextField fx:id="codeText" blendMode="MULTIPLY" layoutX="76.0" layoutY="84.0" prefHeight="34.0" prefWidth="204.0" promptText="Code" style="-fx-background-color: white;" />
+                        <ChoiceBox fx:id="categoryChoice" layoutX="76.0" layoutY="140.0" prefHeight="61.0" prefWidth="204.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" />
+                        <TextField fx:id="quantityText" blendMode="MULTIPLY" layoutX="76.0" layoutY="208.0" prefHeight="34.0" prefWidth="206.0" promptText="Quantity" style="-fx-background-color: white;" />
+                        <TextField fx:id="priceText" blendMode="MULTIPLY" layoutX="75.0" layoutY="270.0" prefHeight="34.0" prefWidth="210.0" promptText="Price" style="-fx-background-color: white;" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="58.0" layoutX="31.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_name.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="41.0" fitWidth="50.0" layoutX="25.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_code.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="54.0" layoutX="32.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_category.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="42.0" layoutX="30.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_quantity.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="DARKEN" fitHeight="54.0" fitWidth="45.0" layoutX="27.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_price.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="294.0" layoutY="201.0" mnemonicParsing="false" onAction="#insertButtonAction" prefHeight="48.0" prefWidth="115.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Insert" />
+                        <Line endX="100.0" layoutX="177.0" layoutY="63.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="177.0" layoutY="118.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="180.0" layoutY="242.0" startX="-100.0" />
+                        <Line endX="107.0" layoutX="178.0" layoutY="304.0" startX="-100.0" />
+                        <Text fx:id="insertError" fill="#dd1111" layoutX="303.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.22900390625" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD;" text="Update">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="370.0">
+                     <children>
+                        <TextField fx:id="itemName" blendMode="MULTIPLY" layoutX="148.0" layoutY="53.0" prefHeight="34.0" prefWidth="203.0" promptText="Name" style="-fx-background-color: white;" />
+                        <TextField fx:id="newText" blendMode="MULTIPLY" layoutX="148.0" layoutY="170.0" prefHeight="34.0" prefWidth="202.0" promptText="New Detail" style="-fx-background-color: white;" />
+                        <ChoiceBox fx:id="updateList" layoutX="148.0" layoutY="114.0" prefHeight="34.0" prefWidth="203.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9;" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="47.0" fitWidth="55.0" layoutX="90.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_name.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="33.0" layoutX="101.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@infomation.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="39.0" layoutX="98.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@item_category.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="148.0" layoutY="263.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Update" />
+                        <Line endX="100.0" layoutX="249.0" layoutY="87.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="250.0" layoutY="204.0" startX="-100.0" />
+                        <Text fx:id="updateError" fill="#e12121" layoutX="154.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="123.22900390625" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="reportPane" layoutX="169.0" layoutY="-5.0" prefHeight="420.0" prefWidth="472.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" visible="false">
+         <children>
+            <Label layoutX="28.0" layoutY="20.0" text="6 reports export successfully" textFill="#d78f14">
+               <font>
+                  <Font name="Bodoni 72 Oldstyle Book" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="74.0" text="1) All users" AnchorPane.leftAnchor="28.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="123.0" text="2) Cancelled Transactions" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="123.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="243.0" text="4) Sold Items" AnchorPane.leftAnchor="32.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="182.0" text="3) Current Avaliable Items" AnchorPane.leftAnchor="32.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="301.0" text="5) Current Avaliable Cashies" AnchorPane.leftAnchor="32.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="353.0" text="6) Succed Transactions" AnchorPane.leftAnchor="31.0">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="102.0" text="src/main/resources/database/Accounts" textFill="#646161" />
+            <Label layoutX="88.0" layoutY="151.0" text="src/main/resources/database/CancelledTransaction" textFill="#646161" />
+            <Label layoutX="88.0" layoutY="210.0" text="src/main/resources/database/Items" textFill="#646161" />
+            <Label layoutX="87.0" layoutY="271.0" text="src/main/resources/database/SoldItems" textFill="#646161" />
+            <Label layoutX="82.0" layoutY="329.0" text="src/main/resources/database/Cashies" textFill="#646161" />
+            <Label layoutX="84.0" layoutY="381.0" text="src/main/respurces/database/History" textFill="#646161" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="moneyPane" layoutX="169.0" layoutY="-5.0" prefHeight="426.0" prefWidth="472.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" visible="false">
+         <children>
+            <ChoiceBox fx:id="moneyList" layoutX="141.0" layoutY="88.0" prefHeight="42.0" prefWidth="206.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9;" />
+            <TextField fx:id="moneyText" layoutX="141.0" layoutY="179.0" prefHeight="42.0" prefWidth="206.0" promptText="Enter amount" />
+            <ImageView blendMode="MULTIPLY" fitHeight="89.0" fitWidth="51.0" layoutX="73.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@item_price.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="47.0" fitWidth="51.0" layoutX="73.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@item_quantity.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="157.0" layoutY="291.0" mnemonicParsing="false" onAction="#modifyButtonAction" prefHeight="39.0" prefWidth="117.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Modify">
+               <font>
+                  <Font name="Courier" size="16.0" />
+               </font>
+            </Button>
+            <Text fx:id="moneyBox" fill="#65c94b" layoutX="170.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets left="Infinity" />
+   </opaqueInsets>
+</AnchorPane>

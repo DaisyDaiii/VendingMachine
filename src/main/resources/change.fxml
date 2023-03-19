@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="641.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vendingMachine.views.ChangeController">
+   <children>
+      <Pane prefHeight="420.0" prefWidth="239.0" style="-fx-background-color: linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671);">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@thank.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="119.0" layoutX="108.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@you.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backtoLoginAction" blendMode="MULTIPLY" layoutX="29.0" layoutY="241.0" mnemonicParsing="false" onAction="#backtoLoginAction" prefHeight="45.0" prefWidth="182.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Back to Login" textFill="#eee0e0">
+               <font>
+                  <Font name="Courier" size="16.0" />
+               </font></Button>
+            <Button fx:id="keepShoppingAction" blendMode="MULTIPLY" layoutX="29.0" layoutY="320.0" mnemonicParsing="false" onAction="#keepShoppingAction" prefHeight="45.0" prefWidth="182.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Keep Shopping" textFill="#eee0e0">
+               <font>
+                  <Font name="Courier" size="16.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Text layoutX="320.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is your changes:" wrappingWidth="231.23486328125">
+         <font>
+            <Font name="Apple Symbols" size="25.0" />
+         </font></Text>
+      <ListView fx:id="changeList" blendMode="MULTIPLY" layoutX="320.0" layoutY="160.0" prefHeight="260.0" prefWidth="200.0" style="-fx-background-color: white;" />
+      <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="320.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@paymentSuccess.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vendingMachine.views.LoginController">
+   <children>
+      <AnchorPane layoutX="263.0" layoutY="23.0" prefHeight="345.0" prefWidth="323.0" style="-fx-background-color: #D5CABD#D5CABD; -fx-background-radius: 15;" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="23.0">
+         <children>
+            <ImageView blendMode="MULTIPLY" fitHeight="37.0" fitWidth="43.0" layoutX="52.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: multiply;">
+               <image>
+                  <Image url="@user.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="252.0" endY="158.0" layoutX="48.0" layoutY="-16.0" startX="52.0" startY="158.0" />
+            <Line endX="149.0" endY="-47.0" layoutX="152.0" layoutY="252.0" startX="-52.0" startY="-47.0" />
+            <TextField fx:id="usernameField" blendMode="MULTIPLY" layoutX="99.0" layoutY="105.0" prefHeight="37.0" prefWidth="202.0" promptText="Username" style="-fx-background-color: white;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <PasswordField fx:id="passwordField" blendMode="MULTIPLY" focusTraversable="false" layoutX="100.0" layoutY="168.0" prefHeight="37.0" prefWidth="201.0" promptText="Password" style="-fx-background-color: white;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </PasswordField>
+            <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="52.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@password.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="81.0" layoutY="36.0" prefHeight="47.0" prefWidth="190.0" text="Sign In">
+               <font>
+                  <Font name="Courier" size="43.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="71.0" layoutY="265.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Login" />
+            <Button layoutX="201.0" layoutY="265.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Register" />
+            <Text fx:id="errorBox" fill="#cd0d0d" layoutX="99.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="190.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="22.0" layoutY="9.0" prefHeight="377.0" prefWidth="279.0" style="-fx-background-color: linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671); -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="219.0" layoutX="8.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@vending.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="219.0" layoutX="46.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@machine.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="259.0" mnemonicParsing="false" onAction="#visitorButtonAction" prefHeight="73.0" prefWidth="279.0" style="-fx-background-color: #FF9671#FF9671;" text="Start Journey">
+               <font>
+                  <Font name="Courier" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vendingMachine.views.SellerController">
+   <children>
+      <AnchorPane prefHeight="420.0" prefWidth="191.0" style="-fx-background-color: linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671) linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671)linear-gradient(to right bottom, #ffc75f, #ffba61, #ffad65, #ffa16b, #ff9671);">
+         <children>
+            <ImageView blendMode="MULTIPLY" fitHeight="114.0" fitWidth="87.0" layoutX="62.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@seller.png" />
+               </image>
+            </ImageView>
+            <Button blendMode="MULTIPLY" layoutX="22.0" layoutY="187.0" mnemonicParsing="false" onAction="#itemButtonAction" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Manage Item" textFill="#eee0e0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+            <Button blendMode="MULTIPLY" layoutX="22.0" layoutY="257.0" mnemonicParsing="false" onAction="#reportAction" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Export Repory" textFill="#eee0e0">
+               <font>
+                  <Font name="Courier" size="14.0" />
+               </font>
+            </Button>
+            <Button blendMode="MULTIPLY" layoutX="22.0" layoutY="330.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Log Out" textFill="#eee0e0">
+               <font>
+                  <Font name="Courier" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="191.0" prefHeight="420.0" prefWidth="450.0">
+         <children>
+            <TabPane fx:id="itemPane" layoutX="-1.0" prefHeight="420.0" prefWidth="450.0" style="-fx-tab-min-height: 50; -fx-tab-min-width: 70; -fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" text="Delete">
+                     <content>
+                        <AnchorPane prefHeight="367.0" prefWidth="411.0">
+                           <children>
+                              <ImageView blendMode="MULTIPLY" fitHeight="50.0" fitWidth="51.0" layoutX="67.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_name.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="deleteItem" blendMode="MULTIPLY" layoutX="128.0" layoutY="92.0" prefHeight="38.0" prefWidth="215.0" promptText="Enter name" style="-fx-background-color: white;" />
+                              <Line endX="114.0" layoutX="228.0" layoutY="130.0" startX="-100.0" />
+                              <Button layoutX="134.0" layoutY="208.0" mnemonicParsing="false" onAction="#deleteItemAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Delete" />
+                              <Text fx:id="deleteError" layoutX="140.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="130.22900390625" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" text="Insert">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="50.0" layoutX="35.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_name.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="51.0" layoutX="37.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_code.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="40.0" layoutX="42.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_category.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="47.0" layoutX="39.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_quantity.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="48.0" layoutX="42.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_price.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="nameInsertText" blendMode="MULTIPLY" layoutX="90.0" layoutY="41.0" prefHeight="32.0" prefWidth="180.0" promptText="name" style="-fx-background-color: white;" />
+                              <TextField fx:id="codeText" blendMode="MULTIPLY" layoutX="88.0" layoutY="100.0" prefHeight="31.0" prefWidth="184.0" promptText="code" style="-fx-background-color: white;" />
+                              <TextField fx:id="quantityText" blendMode="MULTIPLY" layoutX="90.0" layoutY="207.0" prefHeight="32.0" prefWidth="182.0" promptText="quantity" style="-fx-background-color: white;" />
+                              <TextField fx:id="priceText" blendMode="MULTIPLY" layoutX="89.0" layoutY="263.0" prefHeight="31.0" prefWidth="185.0" promptText="price" style="-fx-background-color: white;" />
+                              <Line endX="121.0" layoutX="149.0" layoutY="73.0" startX="-59.0" />
+                              <Line endX="92.0" layoutX="180.0" layoutY="131.0" startX="-92.0" />
+                              <Line endX="114.0" layoutX="158.0" layoutY="239.0" startX="-68.0" />
+                              <Line endX="85.0" layoutX="189.0" layoutY="294.0" startX="-100.0" />
+                              <Button layoutX="289.0" layoutY="222.0" mnemonicParsing="false" onAction="#insertButtonAction" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 20;" text="Insert">
+                                 <font>
+                                    <Font name="Courier" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Text fx:id="insertError" layoutX="285.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.22900390625" />
+                              <ChoiceBox fx:id="category_choice" layoutX="90.0" layoutY="157.0" prefHeight="32.0" prefWidth="191.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" text="Update">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="44.0" layoutX="83.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_name.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="52.0" layoutX="83.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@infomation.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView blendMode="MULTIPLY" fitHeight="48.0" fitWidth="50.0" layoutX="80.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@item_category.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="itemName" blendMode="MULTIPLY" layoutX="140.0" layoutY="67.0" prefHeight="31.0" prefWidth="191.0" promptText="Name" style="-fx-background-color: white;" />
+                              <TextField fx:id="newText" blendMode="MULTIPLY" layoutX="140.0" layoutY="191.0" prefHeight="30.0" prefWidth="191.0" promptText="New detail" style="-fx-background-color: white;" />
+                              <ChoiceBox fx:id="updateList" layoutX="140.0" layoutY="123.0" prefHeight="38.0" prefWidth="191.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9;" />
+                              <Button layoutX="165.0" layoutY="267.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9 #B0A8B9#B0A8B9; -fx-background-radius: 15;" text="Update" />
+                              <Text fx:id="updateError" layoutX="168.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="135.22900390625" />
+                              <Line endX="90.0" layoutX="241.0" layoutY="98.0" startX="-100.0" />
+                              <Line endX="95.0" layoutX="236.0" layoutY="221.0" startX="-96.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="reportPane" layoutX="191.0" layoutY="1.0" prefHeight="420.0" prefWidth="450.0" style="-fx-background-color: #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD #D5CABD#D5CABD;" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="78.0" text="2 reports export successfully" textFill="#d78f14">
+               <font>
+                  <Font name="Bodoni 72 Oldstyle Book" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="169.0" text="1) Current Avaliable Items">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="243.0" text=" 2) Sold Items">
+               <font>
+                  <Font name="Apple Symbols" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="210.0" text="src/main/resources/database/Items" textFill="#646161" />
+            <Label layoutX="121.0" layoutY="288.0" text="src/main/resources/database/SoldItems" textFill="#646161" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
